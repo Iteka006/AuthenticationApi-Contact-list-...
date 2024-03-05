@@ -164,6 +164,19 @@ class MyDrawer extends StatelessWidget {
               );
             },
           ),
+            ListTile(
+  leading: Icon(Icons.contacts),
+  title: Text('Contacts'),
+  onTap: () {
+    Navigator.pop(context);
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => ContactPage(themeData: Theme.of(context)),
+      ),
+    );
+  },
+),
           ListTile(
             leading: Icon(Icons.logout),
             title: Text('Logout'),
